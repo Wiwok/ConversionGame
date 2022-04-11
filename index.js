@@ -12,9 +12,7 @@ function main() {
 	console.clear();
 	console.log('\n');
 	console.log('Welcome to\n');
-	figlet('Conversion', 'Sub-Zero', function(err, data) {
-		console.log(data);
-	});
+	figlet('Conversion', 'Sub-Zero', function(err, data) {console.log(data);});
 	setTimeout(() => {
 		figlet('Game', 'Sub-Zero', function(err, data) {
 			console.log(data);
@@ -57,3 +55,4 @@ function main() {
 
 
 main();
+console.log('End');

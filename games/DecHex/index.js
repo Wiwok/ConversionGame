@@ -19,8 +19,6 @@ function DecToHex(decNumber) {
 		decNumber = Math.trunc(decNumber / 16);
 	}
 
-	// Reverse hexNumber
-
 	hexNumber = reverse(hexNumber.toString());
 
 	while (hexNumber.toString().includes('10')) {
@@ -52,7 +50,7 @@ function DecHex() {
 
 	// eslint-disable-next-line no-constant-condition
 
-	const decNumber = randomInt(0, 32);
+	const decNumber = randomInt(0, 65535);
 	const hexNumber = DecToHex(decNumber);
 
 	console.log('\n');

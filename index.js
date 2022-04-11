@@ -53,4 +53,3 @@ function main() {
 
 
 main();
-console.log('End');

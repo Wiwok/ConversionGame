@@ -16,8 +16,8 @@ async function games() {
 		type: 'list',
 		message: 'Which way do you want to play?',
 		choices: [
-			chalk.redBright('Dec') + ' -> ' + chalk.yellowBright('Hex'),
-			chalk.yellowBright('Hex') + ' -> ' + chalk.redBright('Dec'),
+			chalk.redBright('Dec') + ' -> ' + chalk.yellow('Hex'),
+			chalk.yellow('Hex') + ' -> ' + chalk.redBright('Dec'),
 			chalk.redBright('Dec') + ' -> ' + chalk.greenBright('Bin'),
 			chalk.greenBright('Bin') + ' -> ' + chalk.redBright('Dec'),
 			'Quit'
@@ -27,18 +27,18 @@ async function games() {
 	if (answer.game_select == 'Quit') {
 		console.clear();
 		process.exit(0);
-	} else if (answer.game_select == chalk.redBright('Dec') + ' -> ' + chalk.yellowBright('Hex')) {
+	} else if (answer.game_select == chalk.redBright('Dec') + ' -> ' + chalk.yellow('Hex')) {
 		console.clear();
 		DecHex();
-	} else if (answer.game_select == chalk.yellowBright('Hex') + ' -> ' + chalk.redBright('Dec')) {
+	} else if (answer.game_select == chalk.yellow('Hex') + ' -> ' + chalk.redBright('Dec')) {
+		console.clear();
 		HexDec();
-		console.clear();
 	} else if (answer.game_select == chalk.redBright('Dec') + ' -> ' + chalk.greenBright('Bin')) {
+		console.clear();
 		DecBin();
-		console.clear();
 	} else {
-		BinDec();
 		console.clear();
+		BinDec();
 	}
 
 }

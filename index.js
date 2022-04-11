@@ -14,9 +14,7 @@ function main() {
 	console.log('Welcome to\n');
 	figlet('Conversion', 'Sub-Zero', function(err, data) {console.log(data);});
 	setTimeout(() => {
-		figlet('Game', 'Sub-Zero', function(err, data) {
-			console.log(data);
-		});
+		figlet('Game', 'Sub-Zero', function(err, data) {console.log(data);});
 	}, 10);
 	setTimeout(async () => {
 		console.log('\n\n');

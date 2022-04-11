@@ -14,11 +14,9 @@ function reverse(s) {
 function DecToHex(decNumber) {
 	let hexNumber = decNumber % 16;
 	decNumber = Math.trunc(decNumber / 16);
-	let turns = 0;
 	while (decNumber != 0) {
 		hexNumber = hexNumber + ' ' + (decNumber % 16);
 		decNumber = Math.trunc(decNumber / 16);
-		turns++;
 	}
 
 	// Reverse hexNumber
@@ -77,6 +75,5 @@ function DecHex() {
 	}
 
 }
-
 
 export default DecHex;

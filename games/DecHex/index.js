@@ -53,6 +53,7 @@ function DecHex() {
 	const decNumber = randomInt(0, 65535);
 	const hexNumber = DecToHex(decNumber);
 
+	console.clear();
 	console.log('\n');
 	console.log('Decimal number: ' + chalk.redBright(decNumber));
 	console.log('What is the hexa equivalent ?');
@@ -71,6 +72,9 @@ function DecHex() {
 		console.log(chalk.red('Wrong!!'));
 		console.log('The correct answer is: ' + chalk.yellow(hexNumber));
 	}
+
+	console.log('\nPress a key to go back to the menu...');
+	prompt('');
 
 }
 

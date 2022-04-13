@@ -34,6 +34,7 @@ function DecBin() {
 
 	const binNumber = DecToBin(decNumber);
 
+	console.clear();
 	console.log('\n');
 	console.log('Decimal number: ' + chalk.redBright(decNumber));
 	console.log('What is the binary equivalent ?');
@@ -50,6 +51,9 @@ function DecBin() {
 		console.log(chalk.red('Wrong!!'));
 		console.log('The correct answer is: ' + chalk.greenBright(binNumber));
 	}
+
+	console.log('\nPress a key to go back to the menu...');
+	prompt('');
 
 }
 

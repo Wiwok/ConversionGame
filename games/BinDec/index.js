@@ -14,15 +14,11 @@ function DecToBin(decNumber) {
 	let hexNumber = decNumber % 2;
 	decNumber = Math.trunc(decNumber / 2);
 	while (decNumber != 0) {
-		hexNumber = hexNumber + '' + (decNumber % 2);
+		hexNumber = hexNumber + '' + decNumber % 2;
 		decNumber = Math.trunc(decNumber / 2);
 	}
 
 	hexNumber = reverse(hexNumber.toString());
-
-	/* for (let i = 0; i < hexNumber.toString().length() / 4; i++) {
-		hexNumber = hexNumber.toString()[4 ** i].split('').join(' ');
-	}*/
 
 	return hexNumber;
 }
@@ -32,6 +28,7 @@ function BinDec() {
 	const decNumber = randomInt(0, 65535);
 	const binNumber = DecToBin(decNumber);
 
+	console.clear();
 	console.log('\n');
 	console.log('Binary number: ' + chalk.greenBright(binNumber));
 	console.log('What is the decimal equivalent ?');
@@ -48,6 +45,9 @@ function BinDec() {
 		console.log(chalk.red('Wrong!!'));
 		console.log('The correct answer is: ' + chalk.redBright(decNumber));
 	}
+
+	console.log('\nPress a key to go back to the menu...');
+	prompt('');
 
 }
 

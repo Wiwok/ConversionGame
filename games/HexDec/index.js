@@ -12,6 +12,7 @@ function reverse(s) {
 
 
 function DecToHex(decNumber) {
+	// Here i put space between numbers for reversing it after
 	let hexNumber = decNumber % 16;
 	decNumber = Math.trunc(decNumber / 16);
 	while (decNumber != 0) {
@@ -48,9 +49,11 @@ function DecToHex(decNumber) {
 
 function HexDec() {
 
-	const decNumber = randomInt(0, 32);
+	const decNumber = randomInt(0, 65535);
 	const hexNumber = DecToHex(decNumber);
 
+
+	console.clear();
 	console.log('\n');
 	console.log('Hexadecimal number: ' + chalk.yellow(hexNumber));
 	console.log('What is the decimal equivalent ?');
@@ -63,10 +66,15 @@ function HexDec() {
 	if (decNumber == number) {
 		console.log(chalk.green('Right!!'));
 		console.log('You\'re right, ' + chalk.redBright(decNumber) + ' is the correct answer.');
+
 	} else {
 		console.log(chalk.red('Wrong!!'));
 		console.log('The correct answer is: ' + chalk.redBright(decNumber));
+
 	}
+
+	console.log('\nPress a key to go back to the menu...');
+	prompt('');
 
 }
 

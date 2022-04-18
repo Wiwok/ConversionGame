@@ -1,5 +1,6 @@
 import promptSync from 'prompt-sync';
 import figlet from 'figlet';
+import chalk from 'chalk';
 import inquirer from 'inquirer';
 const prompt = promptSync();
 let answer;
@@ -19,7 +20,7 @@ function main() {
 	}, 10);
 	setTimeout(async () => {
 		console.log('\n\n');
-		console.log('It\'s a game where you will learn how to convert hexadecimal, decimal and binary\n\n');
+		console.log('It\'s a game where you will learn how to convert ' + chalk.yellow('hexadecimal') + ', ' + chalk.redBright('decimal') + ' and ' + chalk.greenBright('binary') + '.\n\n');
 
 		answer = await inquirer.prompt({
 			name: 'menu_select',
@@ -27,7 +28,7 @@ function main() {
 			message: 'What do you wanna do ?',
 			choices: [
 				'Play',
-				'Help',
+				'Learn',
 				'View credits',
 				'Quit'
 			]
@@ -35,7 +36,7 @@ function main() {
 
 		if (answer.menu_select == 'Play') {
 			games();
-		} else if (answer.menu_select == 'Help') {
+		} else if (answer.menu_select == 'Learn') {
 			help();
 
 		} else if (answer.menu_select == 'View credits') {
@@ -43,7 +44,7 @@ function main() {
 			console.log('This game was made by Wiwok:');
 			console.log('https://github.com/Wiwok');
 			console.log('\n');
-			console.log('Press enter to return to the menu...');
+			console.log('\nPress ' + chalk.greenBright('ENTER') + ' to go back to the menu.');
 			prompt('');
 			main();
 

@@ -1,6 +1,7 @@
 import chalk from 'chalk';
 import promptSync from 'prompt-sync';
 const prompt = promptSync();
+import games from '../index.js';
 
 function randomInt(min, max) {
 	return Math.floor(Math.random() * (max - min + 1) + min);
@@ -46,8 +47,9 @@ function BinDec() {
 		console.log('The correct answer is: ' + chalk.redBright(decNumber));
 	}
 
-	console.log('\nPress a key to go back to the menu...');
+	console.log('\nPress ' + chalk.greenBright('ENTER') + ' to go back to the main menu.');
 	prompt('');
+	games();
 
 }
 
